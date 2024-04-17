@@ -1,7 +1,10 @@
 const express = require('express');
+require('dotenv').config();
 const app = express();
 app.use(express.json())
-const PORT = 3000;
+const PORT = process.env.PORT || 10000;
+
+// console.log(PORT, " portttt")
 const http = require('http');
 const WebSocketServer = require('websocket').server
 
